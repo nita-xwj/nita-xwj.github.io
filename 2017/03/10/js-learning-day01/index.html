@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://nita-xwj.github.io">
-  <title>Archives | 熊文晶的Blog</title>
+  <title>Javascript学习笔记-数据类型及转换，操作符 | 熊文晶的Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="呵呵">
-<meta property="og:type" content="website">
-<meta property="og:title" content="熊文晶的Blog">
-<meta property="og:url" content="http://nita-xwj.github.io/archives/index.html">
+  <meta name="description" content="数据类型及转换1、undefined类型12var exam; // 声明了变量，但未赋值var exam_1 = undefined ; // 显示赋值了undefined
+上面两个exam变量的类型均为undefined
+2、null类型123var exam = null; // 显示声明null类型变量alert(typeof exam); // Object 因为null会被看成空的对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript学习笔记-数据类型及转换，操作符">
+<meta property="og:url" content="http://nita-xwj.github.io/2017/03/10/js-learning-day01/index.html">
 <meta property="og:site_name" content="熊文晶的Blog">
-<meta property="og:description" content="呵呵">
+<meta property="og:description" content="数据类型及转换1、undefined类型12var exam; // 声明了变量，但未赋值var exam_1 = undefined ; // 显示赋值了undefined
+上面两个exam变量的类型均为undefined
+2、null类型123var exam = null; // 显示声明null类型变量alert(typeof exam); // Object 因为null会被看成空的对象">
+<meta property="og:updated_time" content="2017-03-10T09:12:44.271Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="熊文晶的Blog">
-<meta name="twitter:description" content="呵呵">
+<meta name="twitter:title" content="Javascript学习笔记-数据类型及转换，操作符">
+<meta name="twitter:description" content="数据类型及转换1、undefined类型12var exam; // 声明了变量，但未赋值var exam_1 = undefined ; // 显示赋值了undefined
+上面两个exam变量的类型均为undefined
+2、null类型123var exam = null; // 显示声明null类型变量alert(typeof exam); // Object 因为null会被看成空的对象">
   
     <link rel="alternative" href="/atom.xml" title="熊文晶的Blog" type="application/atom+xml">
   
@@ -156,36 +163,73 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js-learning-day01" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/10/js-learning-day01/" class="archive-article-date">
-  	<time datetime="2017-03-10T06:43:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/10/js-learning-day01/">Javascript学习笔记-数据类型及转换，操作符</a>
+    <h1 class="article-title" itemprop="name">
+      Javascript学习笔记-数据类型及转换，操作符
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/03/10/js-learning-day01/" class="archive-article-date">
+  	<time datetime="2017-03-10T06:43:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据类型及转换"><a href="#数据类型及转换" class="headerlink" title="数据类型及转换"></a>数据类型及转换</h1><h4 id="1、undefined类型"><a href="#1、undefined类型" class="headerlink" title="1、undefined类型"></a>1、undefined类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var exam; // 声明了变量，但未赋值</div><div class="line">var exam_1 = undefined ; // 显示赋值了undefined</div></pre></td></tr></table></figure>
+<p>上面两个exam变量的类型均为undefined</p>
+<h4 id="2、null类型"><a href="#2、null类型" class="headerlink" title="2、null类型"></a>2、null类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var exam = null; // 显示声明null类型变量</div><div class="line">alert(typeof exam); // Object 因为null会被看成空的对象，所以返回Object。</div><div class="line">alert(null == undefined); // true 因为undefined是派生自null。</div></pre></td></tr></table></figure>
+<p>只要意在保存对象的变量还没有保存对象，就应该让该变量保存null值。</p>
+<h4 id="3、Boolean类型"><a href="#3、Boolean类型" class="headerlink" title="3、Boolean类型"></a>3、Boolean类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var exam = true; // 显示声明</div><div class="line">数据转换：</div><div class="line">alert(Boolean(&quot;str&quot;)); // true 非空字符串会转换为true</div><div class="line">alert(Boolean(123)); // true 非零数字之会转换为true</div><div class="line">alert(Boolean(Object)); // true 任何非空对象会转换为true</div></pre></td></tr></table></figure>
+<p>控制语句中存在自动执行Boolean转换。</p>
+<h4 id="4、Number类型"><a href="#4、Number类型" class="headerlink" title="4、Number类型"></a>4、Number类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var exam = 123; // 显示声明</div><div class="line">var exam_1 = 070; // exam_1为八进制56</div><div class="line">var exam_2 = 090; // exam_2为10进制90，因为不符合八进制规则</div><div class="line">var exam_float = 1.; // 小数点后没有数字，解析为整数1</div><div class="line">var exam_float_1 = 10.0; // 小数点后为0，解析为整数10</div><div class="line">数据转换：</div><div class="line">var num = Number(&quot;123fhuwf&quot;); // 123</div><div class="line">var num1 = Number(&quot;hello world&quot;); // NaN</div><div class="line">var num4 = Number(&quot;&quot;); // 0</div><div class="line">var num3 = Number(null); // 0</div><div class="line">var num4 = Number(undefined); // NaN</div></pre></td></tr></table></figure>
+<p>浮点数占用的内存空间是整数的两倍，因为会自动的将10.0，1.这类的浮点数转换为整数。Number()转换比较复杂而且不够合理，因此转换的时候大多使用ParseInt()函数。ParseInt()可以指定第二个参数作为转换基数，例如ParseInt(“10”,2)，则会转换成相应的二进制。</p>
+<h4 id="5、String类型"><a href="#5、String类型" class="headerlink" title="5、String类型"></a>5、String类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var exam = &quot;hello world&quot;; // 显示声明</div><div class="line">var str = &quot;Java&quot;;</div><div class="line">var str = str + &quot;script&quot;; // 这两行代码的底层实现为：先创建一个可以容纳10个字符的新字符串，然后将&quot;Java&quot;和&quot;script&quot;两个字符串填充到新的字符串中，然后销毁原来的字符串。</div></pre></td></tr></table></figure>
+<p>字符串一旦创建，就不可改变。若要改变某个字符串，首先要销毁原字符串，然后创建一个新的字符串来填充该变量，这些是在底层完成。</p>
+<h4 id="6、Object类型"><a href="#6、Object类型" class="headerlink" title="6、Object类型"></a>6、Object类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var exam = new Object(); // 显示声明</div><div class="line">exam.toString(); // 返回对象的字符串表示</div><div class="line">exam.valueOf(); // 返回对象字符串，数值或布尔值表示</div></pre></td></tr></table></figure>
+<h1 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h1><h4 id="1、布尔操作符"><a href="#1、布尔操作符" class="headerlink" title="1、布尔操作符"></a>1、布尔操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">逻辑与：</div><div class="line">var exam = true;</div><div class="line">var result = (exam &amp;&amp; noDefined); // 会发生错误</div><div class="line">alert(result); // 这里不会执行</div><div class="line">var exam = false;</div><div class="line">var result = (exam &amp;&amp; noDefined); // 不会发生错误</div><div class="line">alert(result); // false</div><div class="line">逻辑或：</div><div class="line">var exam = false;</div><div class="line">var result = (exam &amp;&amp; noDefined); // 会发生错误</div><div class="line">alert(result); // 这里不会执行</div><div class="line">var exam = true;</div><div class="line">var result = (exam &amp;&amp; noDefined); // 不会发生错误</div><div class="line">alert(result); // true</div></pre></td></tr></table></figure>
+<p>某些情况下代码中含未定义变量会出错，某些情况则不会，要分清情况具体分析。</p>
+<h4 id="2、加性操作符"><a href="#2、加性操作符" class="headerlink" title="2、加性操作符"></a>2、加性操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var result = 5 + &quot;5&quot;; // 55 整数值被转换成了字符串</div></pre></td></tr></table></figure>
+<h4 id="3、关系操作符"><a href="#3、关系操作符" class="headerlink" title="3、关系操作符"></a>3、关系操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var result = &quot;Brick&quot; &lt; &quot;awqf&quot;; // true 大写字母的编码值小于小写字母</div><div class="line">var result = &quot;23&quot; &lt; &quot;3&quot;; // true 字符2的编码值小于字符3的编码值</div><div class="line">var result = &quot;23&quot; &lt; 3; // false &quot;23&quot;会被转换成整数值23</div></pre></td></tr></table></figure>
+<h4 id="4、相等操作符"><a href="#4、相等操作符" class="headerlink" title="4、相等操作符"></a>4、相等操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var result = (&quot;123&quot; == 123); // true </div><div class="line">var result = (&quot;123&quot; === 123); // false</div></pre></td></tr></table></figure>
+<p>“==”是相等符号，比较时会先将比较的对象转换成相同的类型，然后进行比较。”===”是全等的符号，比较时不会转换类型，因此类型不同的结果一定是false。</p>
+<h4 id="5、条件操作符"><a href="#5、条件操作符" class="headerlink" title="5、条件操作符"></a>5、条件操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var result = boolean_expreesion ? true_value : false_value;</div></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,46 +241,88 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://nita-xwj.github.io/2017/03/10/js-learning-day01/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/27/hello-world/" class="archive-article-date">
-  	<time datetime="2017-02-27T12:35:24.960Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/27/hello-world/">Hello World</a>
-    </h1>
+  
+    <a href="/2017/02/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -259,8 +345,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -158,6 +158,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js-learning-day01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/10/js-learning-day01/">Javascript学习笔记-数据类型及转换，操作符</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/10/js-learning-day01/" class="archive-article-date">
+  	<time datetime="2017-03-10T06:43:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据类型及转换"><a href="#数据类型及转换" class="headerlink" title="数据类型及转换"></a>数据类型及转换</h1><h4 id="1、undefined类型"><a href="#1、undefined类型" class="headerlink" title="1、undefined类型"></a>1、undefined类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var exam; // 声明了变量，但未赋值</div><div class="line">var exam_1 = undefined ; // 显示赋值了undefined</div></pre></td></tr></table></figure>
+<p>上面两个exam变量的类型均为undefined</p>
+<h4 id="2、null类型"><a href="#2、null类型" class="headerlink" title="2、null类型"></a>2、null类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var exam = null; // 显示声明null类型变量</div><div class="line">alert(typeof exam); // Object 因为null会被看成空的对象，所以返回Object。</div><div class="line">alert(null == undefined); // true 因为undefined是派生自null。</div></pre></td></tr></table></figure>
+<p>只要意在保存对象的变量还没有保存对象，就应该让该变量保存null值。</p>
+<h4 id="3、Boolean类型"><a href="#3、Boolean类型" class="headerlink" title="3、Boolean类型"></a>3、Boolean类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var exam = true; // 显示声明</div><div class="line">数据转换：</div><div class="line">alert(Boolean(&quot;str&quot;)); // true 非空字符串会转换为true</div><div class="line">alert(Boolean(123)); // true 非零数字之会转换为true</div><div class="line">alert(Boolean(Object)); // true 任何非空对象会转换为true</div></pre></td></tr></table></figure>
+<p>控制语句中存在自动执行Boolean转换。</p>
+<h4 id="4、Number类型"><a href="#4、Number类型" class="headerlink" title="4、Number类型"></a>4、Number类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var exam = 123; // 显示声明</div><div class="line">var exam_1 = 070; // exam_1为八进制56</div><div class="line">var exam_2 = 090; // exam_2为10进制90，因为不符合八进制规则</div><div class="line">var exam_float = 1.; // 小数点后没有数字，解析为整数1</div><div class="line">var exam_float_1 = 10.0; // 小数点后为0，解析为整数10</div><div class="line">数据转换：</div><div class="line">var num = Number(&quot;123fhuwf&quot;); // 123</div><div class="line">var num1 = Number(&quot;hello world&quot;); // NaN</div><div class="line">var num4 = Number(&quot;&quot;); // 0</div><div class="line">var num3 = Number(null); // 0</div><div class="line">var num4 = Number(undefined); // NaN</div></pre></td></tr></table></figure>
+<p>浮点数占用的内存空间是整数的两倍，因为会自动的将10.0，1.这类的浮点数转换为整数。Number()转换比较复杂而且不够合理，因此转换的时候大多使用ParseInt()函数。ParseInt()可以指定第二个参数作为转换基数，例如ParseInt(“10”,2)，则会转换成相应的二进制。</p>
+<h4 id="5、String类型"><a href="#5、String类型" class="headerlink" title="5、String类型"></a>5、String类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var exam = &quot;hello world&quot;; // 显示声明</div><div class="line">var str = &quot;Java&quot;;</div><div class="line">var str = str + &quot;script&quot;; // 这两行代码的底层实现为：先创建一个可以容纳10个字符的新字符串，然后将&quot;Java&quot;和&quot;script&quot;两个字符串填充到新的字符串中，然后销毁原来的字符串。</div></pre></td></tr></table></figure>
+<p>字符串一旦创建，就不可改变。若要改变某个字符串，首先要销毁原字符串，然后创建一个新的字符串来填充该变量，这些是在底层完成。</p>
+<h4 id="6、Object类型"><a href="#6、Object类型" class="headerlink" title="6、Object类型"></a>6、Object类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var exam = new Object(); // 显示声明</div><div class="line">exam.toString(); // 返回对象的字符串表示</div><div class="line">exam.valueOf(); // 返回对象字符串，数值或布尔值表示</div></pre></td></tr></table></figure>
+<h1 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h1><h4 id="1、布尔操作符"><a href="#1、布尔操作符" class="headerlink" title="1、布尔操作符"></a>1、布尔操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">逻辑与：</div><div class="line">var exam = true;</div><div class="line">var result = (exam &amp;&amp; noDefined); // 会发生错误</div><div class="line">alert(result); // 这里不会执行</div><div class="line">var exam = false;</div><div class="line">var result = (exam &amp;&amp; noDefined); // 不会发生错误</div><div class="line">alert(result); // false</div><div class="line">逻辑或：</div><div class="line">var exam = false;</div><div class="line">var result = (exam &amp;&amp; noDefined); // 会发生错误</div><div class="line">alert(result); // 这里不会执行</div><div class="line">var exam = true;</div><div class="line">var result = (exam &amp;&amp; noDefined); // 不会发生错误</div><div class="line">alert(result); // true</div></pre></td></tr></table></figure>
+<p>某些情况下代码中含未定义变量会出错，某些情况则不会，要分清情况具体分析。</p>
+<h4 id="2、加性操作符"><a href="#2、加性操作符" class="headerlink" title="2、加性操作符"></a>2、加性操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var result = 5 + &quot;5&quot;; // 55 整数值被转换成了字符串</div></pre></td></tr></table></figure>
+<h4 id="3、关系操作符"><a href="#3、关系操作符" class="headerlink" title="3、关系操作符"></a>3、关系操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var result = &quot;Brick&quot; &lt; &quot;awqf&quot;; // true 大写字母的编码值小于小写字母</div><div class="line">var result = &quot;23&quot; &lt; &quot;3&quot;; // true 字符2的编码值小于字符3的编码值</div><div class="line">var result = &quot;23&quot; &lt; 3; // false &quot;23&quot;会被转换成整数值23</div></pre></td></tr></table></figure>
+<h4 id="4、相等操作符"><a href="#4、相等操作符" class="headerlink" title="4、相等操作符"></a>4、相等操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var result = (&quot;123&quot; == 123); // true </div><div class="line">var result = (&quot;123&quot; === 123); // false</div></pre></td></tr></table></figure>
+<p>“==”是相等符号，比较时会先将比较的对象转换成相同的类型，然后进行比较。”===”是全等的符号，比较时不会转换类型，因此类型不同的结果一定是false。</p>
+<h4 id="5、条件操作符"><a href="#5、条件操作符" class="headerlink" title="5、条件操作符"></a>5、条件操作符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var result = boolean_expreesion ? true_value : false_value;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js-learning-day01</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/10/js-learning-day01/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -304,6 +383,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js-learning-day01</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
